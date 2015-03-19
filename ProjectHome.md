@@ -1,6 +1,6 @@
 Maven report plugin that allow to generate "project info" as wiki page confluence compliant and also upload generated contents to a confluence site through web services
 
-|Please donate whether you wish support us to give more time to plugin's growth | [(https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H44UTN3G6DAX6) |
+|Please donate whether you wish support us to give more time to plugin's growth | [![(https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)]](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H44UTN3G6DAX6) |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
