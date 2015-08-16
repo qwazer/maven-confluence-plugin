@@ -130,12 +130,10 @@ public class GitLogJiraIssuesRenderer extends AbstractMavenReportRenderer {
                 log.info(String.format("Found %d version tags", jiraIssuesByVersion.keySet().size()));
                 log.debug(": " + jiraIssuesByVersion);
                 report = formatJiraIssuesByVersionToString(jiraIssuesByVersion);
+            } else {
+                report = "NO_JIRA_ISSUES_BY_VERSION_FOUND";
             }
-            else {
-                report = "NO JIRAISSUESBYVERSION FOUND";
-            }
-        }
-        else {
+        } else {
             Set<String> jiraIssues = null;
             try {
                 jiraIssues = GitLogUtil.extractJiraIssues(repository, gitLogSinceTagName, gitLogUntilTagName, pattern);

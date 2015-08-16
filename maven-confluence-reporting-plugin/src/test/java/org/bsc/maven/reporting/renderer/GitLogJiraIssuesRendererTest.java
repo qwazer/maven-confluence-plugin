@@ -2,14 +2,13 @@ package org.bsc.maven.reporting.renderer;
 
 import com.github.qwazer.mavenplugins.gitlog.CalculateRuleForSinceTagName;
 import org.apache.maven.plugin.testing.SilentLog;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
 
 import static com.github.qwazer.mavenplugins.gitlog.CalculateRuleForSinceTagName.*;
 import static java.util.Arrays.asList;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author ar
