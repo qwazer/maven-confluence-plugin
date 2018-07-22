@@ -14,10 +14,11 @@
     <properties>
         <scmUrl>https://github.com/bsorrentino/maven-confluence-reporting-plugin.git</scmUrl>
         <siteUrl>https://github.com/bsorrentino/maven-confluence-plugin</siteUrl>
-        
+        <my_prop>my_prop_value</my_prop>
+
         <api.rpc>rpc/xmlrpc</api.rpc>
         <api.rest>rest/api</api.rest>
-        <api>${api.rest}</api>
+        <api>${api.rpc}</api>
     </properties>
 
     <contributors>
@@ -147,6 +148,7 @@
                     <!--
                     mvn confluence-reporting:deploy@issue158
                     mvn confluence-reporting:delete@issue158
+                    mvn org.bsc.maven:confluence-reporting-maven-plugin:6.0-SNAPSHOT:deploy@issue158
                     -->
                     <execution>
                         <id>issue158</id>
@@ -158,17 +160,16 @@
                             <endPoint>http://localhost:8090/${api}</endPoint>
                             <spaceKey>TEST</spaceKey>
                             <parentPageTitle>Home</parentPageTitle>
-                            <!-- TEST ISSUE 40 -->
                             <siteDescriptor>${basedir}/src/site/confluence/issue158/site-issue158.xml</siteDescriptor>
                             <wikiFilesExt>.confluence</wikiFilesExt>
                             <!-- TEST ISSUE 39 -->
                             <serverId>confluence-local</serverId>
                             
-                            <!-- 
+
                             <deployState>
-                                <active>false</active>
+                                <active>true</active>
                             </deployState>
-                             -->
+
                         </configuration>
                     </execution>
                     <!--
