@@ -17,11 +17,16 @@ public abstract class Md2WikiTestBase {
 
     @Test
     public void simple() {
-
        String res=  md2Wiki.convert("hello");
        Assert.assertEquals("hello", res.trim());
-
     }
+
+    @Test
+    public void header() {
+       String res=  md2Wiki.convert("### hello");
+       Assert.assertEquals("h3.hello", res.trim());
+    }
+
     @Test
     public void cheatsheet() throws IOException {
 
