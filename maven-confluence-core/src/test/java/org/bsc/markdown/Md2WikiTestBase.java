@@ -7,9 +7,13 @@ import org.junit.Test;
 import java.io.IOException;
 
 
-public class Md2WikiPegdownImplTest {
+public abstract class Md2WikiTestBase {
 
     private Md2Wiki md2Wiki = new Md2WikiPegdownImpl();
+
+    public Md2WikiTestBase(Md2Wiki md2Wiki) {
+        this.md2Wiki = md2Wiki;
+    }
 
     @Test
     public void simple() {
@@ -390,6 +394,6 @@ public class Md2WikiPegdownImplTest {
     public void convertAndCompare(String file, String expected) throws IOException {
         String content = IOUtils.toString(getClass().getClassLoader().getResourceAsStream(file));
         String res=  md2Wiki.convert(content);
-        Assert.assertEquals(res, expected);
+        Assert.assertEquals(expected, res);
     }
 }

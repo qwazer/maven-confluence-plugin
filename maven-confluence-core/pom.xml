@@ -116,6 +116,13 @@
             <artifactId>pegdown</artifactId>
         </dependency>
 
+      <!--todo exclude redundant-->
+      <dependency>
+          <groupId>com.vladsch.flexmark</groupId>
+          <artifactId>flexmark-all</artifactId>
+          <version>0.34.10</version>
+      </dependency>
+
     </dependencies>
 
 
