@@ -15,6 +15,8 @@ import java.util.Arrays;
 public class Md2WikiFlexmarkImpl implements Md2Wiki {
 
     static final MutableDataSet OPTIONS = new MutableDataSet()
+            .set(HtmlRenderer.MAX_TRAILING_BLANK_LINES, 1)
+            .set(Parser.BLANK_LINES_IN_AST, true)
             .set(Parser.EXTENSIONS, Arrays.asList(
                     TablesExtension.create(),
                     StrikethroughExtension.create(),
@@ -23,6 +25,13 @@ public class Md2WikiFlexmarkImpl implements Md2Wiki {
 
     static final Parser PARSER = Parser.builder(OPTIONS).build();
     static final HtmlRenderer RENDERER = HtmlRenderer.builder(OPTIONS).build();
+
+//    static final MutableDataSet FORMAT_OPTIONS = new MutableDataSet();
+//    static {
+//        // copy extensions from Pegdown compatible to Formatting
+//        FORMAT_OPTIONS.set(Parser.EXTENSIONS, OPTIONS.get(Parser.EXTENSIONS));
+//        FORMAT_OPTIONS.set()
+//    }
 
 
     @Override

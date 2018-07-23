@@ -169,7 +169,9 @@ public class ConfluenceConverterNodeRenderer implements NodeRenderer
     }
 
     private void render(Heading node, NodeRendererContext context, HtmlWriter html) {
-        html.line().raw("h" + node.getLevel() + ". ");
+        html.blankLine();
+        html.blankLine();
+        html.line().raw("h" + node.getLevel() + ".");
         context.renderChildren(node);
         html.blankLine();
     }

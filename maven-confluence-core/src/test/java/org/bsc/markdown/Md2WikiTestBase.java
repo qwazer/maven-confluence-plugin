@@ -24,7 +24,27 @@ public abstract class Md2WikiTestBase {
     @Test
     public void header() {
        String res=  md2Wiki.convert("### hello");
-       Assert.assertEquals("h3.hello", res.trim());
+       Assert.assertEquals(
+               "h3.hello", res.trim());
+    }
+
+    @Test
+    public void blankLineAtStart() {
+       String res=  md2Wiki.convert("\nhello");
+       Assert.assertEquals(
+
+               "hello\n".trim(), res.trim());
+    }
+
+    @Test
+    public void tocMacros() {
+        String res=  md2Wiki.convert("\n" +
+                "\n" +
+                "{toc}\n" +
+                "\n" +
+                "${pageTitle}");
+        Assert.assertEquals("{toc}\n" +
+                "${pageTitle}\n", res);
     }
 
     @Test
